@@ -37,6 +37,7 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.grpInputFormArea = new System.Windows.Forms.GroupBox();
+            this.lblModule = new System.Windows.Forms.Label();
             this.lstAssignments = new System.Windows.Forms.ListBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSort = new System.Windows.Forms.Button();
@@ -45,89 +46,96 @@
             this.grpMainDisplayArea = new System.Windows.Forms.GroupBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.grpSummaryReportingArea = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSummary = new System.Windows.Forms.Button();
             this.lblModuleProgress = new System.Windows.Forms.Label();
             this.lblDashboardSummary = new System.Windows.Forms.Label();
             this.grpSorting_Searching = new System.Windows.Forms.GroupBox();
+            this.grpSearch = new System.Windows.Forms.GroupBox();
             this.lblKeyword = new System.Windows.Forms.Label();
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
+            this.grpradiob = new System.Windows.Forms.GroupBox();
             this.radDateDesc = new System.Windows.Forms.RadioButton();
             this.radDateAsc = new System.Windows.Forms.RadioButton();
             this.radModule = new System.Windows.Forms.RadioButton();
-            this.grpradiob = new System.Windows.Forms.GroupBox();
-            this.grpSearch = new System.Windows.Forms.GroupBox();
-            this.btnSummary = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblModule = new System.Windows.Forms.Label();
             this.grpInputFormArea.SuspendLayout();
             this.grpMainDisplayArea.SuspendLayout();
             this.grpSummaryReportingArea.SuspendLayout();
             this.grpSorting_Searching.SuspendLayout();
-            this.grpradiob.SuspendLayout();
             this.grpSearch.SuspendLayout();
+            this.grpradiob.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDueDate
             // 
             this.lblDueDate.AutoSize = true;
-            this.lblDueDate.Location = new System.Drawing.Point(11, 93);
+            this.lblDueDate.Location = new System.Drawing.Point(16, 143);
+            this.lblDueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDueDate.Name = "lblDueDate";
-            this.lblDueDate.Size = new System.Drawing.Size(50, 13);
+            this.lblDueDate.Size = new System.Drawing.Size(74, 20);
             this.lblDueDate.TabIndex = 0;
             this.lblDueDate.Text = "DueDate";
             // 
             // lblCompletionStatus
             // 
             this.lblCompletionStatus.AutoSize = true;
-            this.lblCompletionStatus.Location = new System.Drawing.Point(11, 130);
+            this.lblCompletionStatus.Location = new System.Drawing.Point(16, 200);
+            this.lblCompletionStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompletionStatus.Name = "lblCompletionStatus";
-            this.lblCompletionStatus.Size = new System.Drawing.Size(89, 13);
+            this.lblCompletionStatus.Size = new System.Drawing.Size(136, 20);
             this.lblCompletionStatus.TabIndex = 1;
             this.lblCompletionStatus.Text = "CompletionStatus";
             // 
             // lblAssignmentName
             // 
             this.lblAssignmentName.AutoSize = true;
-            this.lblAssignmentName.Location = new System.Drawing.Point(11, 58);
+            this.lblAssignmentName.Location = new System.Drawing.Point(16, 89);
+            this.lblAssignmentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAssignmentName.Name = "lblAssignmentName";
-            this.lblAssignmentName.Size = new System.Drawing.Size(92, 13);
+            this.lblAssignmentName.Size = new System.Drawing.Size(139, 20);
             this.lblAssignmentName.TabIndex = 3;
             this.lblAssignmentName.Text = "Assignment Name";
             // 
             // txtModule
             // 
-            this.txtModule.Location = new System.Drawing.Point(112, 19);
+            this.txtModule.Location = new System.Drawing.Point(168, 29);
+            this.txtModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModule.Name = "txtModule";
-            this.txtModule.Size = new System.Drawing.Size(200, 20);
+            this.txtModule.Size = new System.Drawing.Size(298, 26);
             this.txtModule.TabIndex = 4;
             // 
             // txtAssignmentName
             // 
-            this.txtAssignmentName.Location = new System.Drawing.Point(112, 51);
+            this.txtAssignmentName.Location = new System.Drawing.Point(168, 78);
+            this.txtAssignmentName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAssignmentName.Name = "txtAssignmentName";
-            this.txtAssignmentName.Size = new System.Drawing.Size(200, 20);
+            this.txtAssignmentName.Size = new System.Drawing.Size(298, 26);
             this.txtAssignmentName.TabIndex = 5;
             // 
             // dtpDueDate
             // 
-            this.dtpDueDate.Location = new System.Drawing.Point(112, 87);
+            this.dtpDueDate.Location = new System.Drawing.Point(168, 134);
+            this.dtpDueDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDueDate.Name = "dtpDueDate";
-            this.dtpDueDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDueDate.Size = new System.Drawing.Size(298, 26);
             this.dtpDueDate.TabIndex = 6;
             // 
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(109, 122);
+            this.cmbStatus.Location = new System.Drawing.Point(164, 188);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(203, 21);
+            this.cmbStatus.Size = new System.Drawing.Size(302, 28);
             this.cmbStatus.TabIndex = 7;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(112, 177);
+            this.btnAdd.Location = new System.Drawing.Point(168, 272);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(98, 23);
+            this.btnAdd.Size = new System.Drawing.Size(147, 35);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add/Update";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -147,34 +155,50 @@
             this.grpInputFormArea.Controls.Add(this.cmbStatus);
             this.grpInputFormArea.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.grpInputFormArea.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.grpInputFormArea.Location = new System.Drawing.Point(12, 12);
+            this.grpInputFormArea.Location = new System.Drawing.Point(18, 18);
+            this.grpInputFormArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpInputFormArea.Name = "grpInputFormArea";
-            this.grpInputFormArea.Size = new System.Drawing.Size(400, 288);
+            this.grpInputFormArea.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpInputFormArea.Size = new System.Drawing.Size(600, 443);
             this.grpInputFormArea.TabIndex = 9;
             this.grpInputFormArea.TabStop = false;
             this.grpInputFormArea.Text = " ";
             this.grpInputFormArea.Enter += new System.EventHandler(this.grpInputFormArea_Enter);
             // 
+            // lblModule
+            // 
+            this.lblModule.AutoSize = true;
+            this.lblModule.Location = new System.Drawing.Point(26, 40);
+            this.lblModule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModule.Name = "lblModule";
+            this.lblModule.Size = new System.Drawing.Size(61, 20);
+            this.lblModule.TabIndex = 15;
+            this.lblModule.Text = "Module";
+            // 
             // lstAssignments
             // 
             this.lstAssignments.FormattingEnabled = true;
-            this.lstAssignments.Location = new System.Drawing.Point(6, 58);
+            this.lstAssignments.ItemHeight = 20;
+            this.lstAssignments.Location = new System.Drawing.Point(9, 89);
+            this.lstAssignments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstAssignments.Name = "lstAssignments";
-            this.lstAssignments.Size = new System.Drawing.Size(322, 160);
+            this.lstAssignments.Size = new System.Drawing.Size(481, 244);
             this.lstAssignments.TabIndex = 9;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(87, 23);
+            this.txtSearch.Location = new System.Drawing.Point(130, 35);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.Size = new System.Drawing.Size(148, 26);
             this.txtSearch.TabIndex = 10;
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(6, 242);
+            this.btnSort.Location = new System.Drawing.Point(9, 372);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.Size = new System.Drawing.Size(112, 35);
             this.btnSort.TabIndex = 11;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
@@ -182,9 +206,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(125, 242);
+            this.btnSearch.Location = new System.Drawing.Point(188, 372);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(112, 35);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -192,9 +217,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(236, 242);
+            this.btnDelete.Location = new System.Drawing.Point(354, 372);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(112, 35);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -208,9 +234,11 @@
             this.grpMainDisplayArea.Controls.Add(this.btnDelete);
             this.grpMainDisplayArea.Controls.Add(this.btnSearch);
             this.grpMainDisplayArea.Controls.Add(this.btnSort);
-            this.grpMainDisplayArea.Location = new System.Drawing.Point(418, 12);
+            this.grpMainDisplayArea.Location = new System.Drawing.Point(627, 18);
+            this.grpMainDisplayArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpMainDisplayArea.Name = "grpMainDisplayArea";
-            this.grpMainDisplayArea.Size = new System.Drawing.Size(361, 288);
+            this.grpMainDisplayArea.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpMainDisplayArea.Size = new System.Drawing.Size(542, 443);
             this.grpMainDisplayArea.TabIndex = 14;
             this.grpMainDisplayArea.TabStop = false;
             this.grpMainDisplayArea.Text = "Main Display Area";
@@ -218,9 +246,10 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(17, 26);
+            this.lblSearch.Location = new System.Drawing.Point(26, 40);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.Size = new System.Drawing.Size(60, 20);
             this.lblSearch.TabIndex = 14;
             this.lblSearch.Text = "Search";
             // 
@@ -230,74 +259,134 @@
             this.grpSummaryReportingArea.Controls.Add(this.btnSummary);
             this.grpSummaryReportingArea.Controls.Add(this.lblModuleProgress);
             this.grpSummaryReportingArea.Controls.Add(this.lblDashboardSummary);
-            this.grpSummaryReportingArea.Location = new System.Drawing.Point(418, 306);
+            this.grpSummaryReportingArea.Location = new System.Drawing.Point(627, 471);
+            this.grpSummaryReportingArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpSummaryReportingArea.Name = "grpSummaryReportingArea";
-            this.grpSummaryReportingArea.Size = new System.Drawing.Size(361, 179);
+            this.grpSummaryReportingArea.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpSummaryReportingArea.Size = new System.Drawing.Size(542, 275);
             this.grpSummaryReportingArea.TabIndex = 14;
             this.grpSummaryReportingArea.TabStop = false;
             this.grpSummaryReportingArea.Text = "Summary & Reporting Area";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(344, 127);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 35);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "View Progress";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSummary
+            // 
+            this.btnSummary.Location = new System.Drawing.Point(344, 55);
+            this.btnSummary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSummary.Name = "btnSummary";
+            this.btnSummary.Size = new System.Drawing.Size(148, 35);
+            this.btnSummary.TabIndex = 16;
+            this.btnSummary.Text = "Summary";
+            this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
+            // 
             // lblModuleProgress
             // 
             this.lblModuleProgress.AutoSize = true;
-            this.lblModuleProgress.Location = new System.Drawing.Point(11, 64);
+            this.lblModuleProgress.Location = new System.Drawing.Point(16, 134);
+            this.lblModuleProgress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModuleProgress.Name = "lblModuleProgress";
-            this.lblModuleProgress.Size = new System.Drawing.Size(110, 13);
+            this.lblModuleProgress.Size = new System.Drawing.Size(136, 20);
             this.lblModuleProgress.TabIndex = 1;
-            this.lblModuleProgress.Text = "  ModuleProgressText";
+            this.lblModuleProgress.Text = "  Module Progress";
             // 
             // lblDashboardSummary
             // 
-            this.lblDashboardSummary.AutoSize = true;
-            this.lblDashboardSummary.Location = new System.Drawing.Point(11, 27);
+            this.lblDashboardSummary.Location = new System.Drawing.Point(16, 55);
+            this.lblDashboardSummary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDashboardSummary.Name = "lblDashboardSummary";
-            this.lblDashboardSummary.Size = new System.Drawing.Size(102, 13);
+            this.lblDashboardSummary.Size = new System.Drawing.Size(232, 35);
             this.lblDashboardSummary.TabIndex = 0;
-            this.lblDashboardSummary.Text = "DashboardSummary";
+            this.lblDashboardSummary.Text = "Dashboard Summary";
+            this.lblDashboardSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // grpSorting_Searching
             // 
             this.grpSorting_Searching.Controls.Add(this.grpSearch);
             this.grpSorting_Searching.Controls.Add(this.grpradiob);
-            this.grpSorting_Searching.Location = new System.Drawing.Point(12, 306);
+            this.grpSorting_Searching.Location = new System.Drawing.Point(18, 471);
+            this.grpSorting_Searching.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpSorting_Searching.Name = "grpSorting_Searching";
-            this.grpSorting_Searching.Size = new System.Drawing.Size(400, 179);
+            this.grpSorting_Searching.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpSorting_Searching.Size = new System.Drawing.Size(600, 275);
             this.grpSorting_Searching.TabIndex = 15;
             this.grpSorting_Searching.TabStop = false;
             this.grpSorting_Searching.Text = "Sorting";
             // 
+            // grpSearch
+            // 
+            this.grpSearch.Controls.Add(this.lblKeyword);
+            this.grpSearch.Controls.Add(this.txtKeyword);
+            this.grpSearch.Controls.Add(this.btnFind);
+            this.grpSearch.Location = new System.Drawing.Point(258, 55);
+            this.grpSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpSearch.Name = "grpSearch";
+            this.grpSearch.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpSearch.Size = new System.Drawing.Size(274, 202);
+            this.grpSearch.TabIndex = 17;
+            this.grpSearch.TabStop = false;
+            this.grpSearch.Text = "Search";
+            // 
             // lblKeyword
             // 
             this.lblKeyword.AutoSize = true;
-            this.lblKeyword.Location = new System.Drawing.Point(6, 22);
+            this.lblKeyword.Location = new System.Drawing.Point(9, 34);
+            this.lblKeyword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKeyword.Name = "lblKeyword";
-            this.lblKeyword.Size = new System.Drawing.Size(48, 13);
+            this.lblKeyword.Size = new System.Drawing.Size(69, 20);
             this.lblKeyword.TabIndex = 2;
             this.lblKeyword.Text = "Keyword";
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(79, 19);
+            this.txtKeyword.Location = new System.Drawing.Point(87, 28);
+            this.txtKeyword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(100, 20);
+            this.txtKeyword.Size = new System.Drawing.Size(179, 26);
             this.txtKeyword.TabIndex = 15;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(58, 64);
+            this.btnFind.Location = new System.Drawing.Point(87, 98);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.Size = new System.Drawing.Size(112, 35);
             this.btnFind.TabIndex = 15;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // grpradiob
+            // 
+            this.grpradiob.Controls.Add(this.radDateDesc);
+            this.grpradiob.Controls.Add(this.radDateAsc);
+            this.grpradiob.Controls.Add(this.radModule);
+            this.grpradiob.Location = new System.Drawing.Point(21, 55);
+            this.grpradiob.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpradiob.Name = "grpradiob";
+            this.grpradiob.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpradiob.Size = new System.Drawing.Size(228, 202);
+            this.grpradiob.TabIndex = 16;
+            this.grpradiob.TabStop = false;
+            this.grpradiob.Text = "Sorting";
+            // 
             // radDateDesc
             // 
             this.radDateDesc.AutoSize = true;
-            this.radDateDesc.Location = new System.Drawing.Point(6, 70);
+            this.radDateDesc.Location = new System.Drawing.Point(9, 108);
+            this.radDateDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radDateDesc.Name = "radDateDesc";
-            this.radDateDesc.Size = new System.Drawing.Size(94, 17);
+            this.radDateDesc.Size = new System.Drawing.Size(138, 24);
             this.radDateDesc.TabIndex = 3;
             this.radDateDesc.TabStop = true;
             this.radDateDesc.Text = "Date (In Desc)";
@@ -307,9 +396,10 @@
             // radDateAsc
             // 
             this.radDateAsc.AutoSize = true;
-            this.radDateAsc.Location = new System.Drawing.Point(6, 47);
+            this.radDateAsc.Location = new System.Drawing.Point(9, 72);
+            this.radDateAsc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radDateAsc.Name = "radDateAsc";
-            this.radDateAsc.Size = new System.Drawing.Size(87, 17);
+            this.radDateAsc.Size = new System.Drawing.Size(128, 24);
             this.radDateAsc.TabIndex = 2;
             this.radDateAsc.TabStop = true;
             this.radDateAsc.Text = "Date (In Asc)";
@@ -319,79 +409,28 @@
             // radModule
             // 
             this.radModule.AutoSize = true;
-            this.radModule.Location = new System.Drawing.Point(6, 24);
+            this.radModule.Location = new System.Drawing.Point(9, 37);
+            this.radModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radModule.Name = "radModule";
-            this.radModule.Size = new System.Drawing.Size(60, 17);
+            this.radModule.Size = new System.Drawing.Size(86, 24);
             this.radModule.TabIndex = 1;
             this.radModule.TabStop = true;
             this.radModule.Text = "Module";
             this.radModule.UseVisualStyleBackColor = true;
             this.radModule.CheckedChanged += new System.EventHandler(this.radModule_CheckedChanged);
             // 
-            // grpradiob
-            // 
-            this.grpradiob.Controls.Add(this.radDateDesc);
-            this.grpradiob.Controls.Add(this.radDateAsc);
-            this.grpradiob.Controls.Add(this.radModule);
-            this.grpradiob.Location = new System.Drawing.Point(14, 36);
-            this.grpradiob.Name = "grpradiob";
-            this.grpradiob.Size = new System.Drawing.Size(152, 131);
-            this.grpradiob.TabIndex = 16;
-            this.grpradiob.TabStop = false;
-            this.grpradiob.Text = "Sorting";
-            // 
-            // grpSearch
-            // 
-            this.grpSearch.Controls.Add(this.lblKeyword);
-            this.grpSearch.Controls.Add(this.txtKeyword);
-            this.grpSearch.Controls.Add(this.btnFind);
-            this.grpSearch.Location = new System.Drawing.Point(172, 36);
-            this.grpSearch.Name = "grpSearch";
-            this.grpSearch.Size = new System.Drawing.Size(183, 131);
-            this.grpSearch.TabIndex = 17;
-            this.grpSearch.TabStop = false;
-            this.grpSearch.Text = "Search";
-            // 
-            // btnSummary
-            // 
-            this.btnSummary.Location = new System.Drawing.Point(229, 36);
-            this.btnSummary.Name = "btnSummary";
-            this.btnSummary.Size = new System.Drawing.Size(99, 23);
-            this.btnSummary.TabIndex = 16;
-            this.btnSummary.Text = "Summary Button";
-            this.btnSummary.UseVisualStyleBackColor = true;
-            this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(247, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblModule
-            // 
-            this.lblModule.AutoSize = true;
-            this.lblModule.Location = new System.Drawing.Point(17, 26);
-            this.lblModule.Name = "lblModule";
-            this.lblModule.Size = new System.Drawing.Size(42, 13);
-            this.lblModule.TabIndex = 15;
-            this.lblModule.Text = "Module";
-            // 
             // FrmModuleTracker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 503);
+            this.ClientSize = new System.Drawing.Size(1200, 774);
             this.Controls.Add(this.grpSorting_Searching);
             this.Controls.Add(this.grpSummaryReportingArea);
             this.Controls.Add(this.grpMainDisplayArea);
             this.Controls.Add(this.grpInputFormArea);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmModuleTracker";
             this.Text = "Module Tracker";
             this.Load += new System.EventHandler(this.FrmModuleTracker_Load);
@@ -402,10 +441,10 @@
             this.grpSummaryReportingArea.ResumeLayout(false);
             this.grpSummaryReportingArea.PerformLayout();
             this.grpSorting_Searching.ResumeLayout(false);
-            this.grpradiob.ResumeLayout(false);
-            this.grpradiob.PerformLayout();
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
+            this.grpradiob.ResumeLayout(false);
+            this.grpradiob.PerformLayout();
             this.ResumeLayout(false);
 
         }
