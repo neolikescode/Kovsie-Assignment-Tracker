@@ -46,7 +46,7 @@
             this.grpMainDisplayArea = new System.Windows.Forms.GroupBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.grpSummaryReportingArea = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewProgress = new System.Windows.Forms.Button();
             this.btnSummary = new System.Windows.Forms.Button();
             this.lblModuleProgress = new System.Windows.Forms.Label();
             this.lblDashboardSummary = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             // 
             // txtModule
             // 
-            this.txtModule.Location = new System.Drawing.Point(168, 29);
+            this.txtModule.Location = new System.Drawing.Point(200, 29);
             this.txtModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModule.Name = "txtModule";
             this.txtModule.Size = new System.Drawing.Size(298, 26);
@@ -107,7 +107,7 @@
             // 
             // txtAssignmentName
             // 
-            this.txtAssignmentName.Location = new System.Drawing.Point(168, 78);
+            this.txtAssignmentName.Location = new System.Drawing.Point(200, 82);
             this.txtAssignmentName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAssignmentName.Name = "txtAssignmentName";
             this.txtAssignmentName.Size = new System.Drawing.Size(298, 26);
@@ -115,7 +115,7 @@
             // 
             // dtpDueDate
             // 
-            this.dtpDueDate.Location = new System.Drawing.Point(168, 134);
+            this.dtpDueDate.Location = new System.Drawing.Point(200, 134);
             this.dtpDueDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDueDate.Name = "dtpDueDate";
             this.dtpDueDate.Size = new System.Drawing.Size(298, 26);
@@ -124,7 +124,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(164, 188);
+            this.cmbStatus.Location = new System.Drawing.Point(200, 197);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(302, 28);
@@ -132,13 +132,19 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(168, 272);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(168, 270);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(147, 35);
+            this.btnAdd.Size = new System.Drawing.Size(180, 42);
             this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "Add/Update";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Text = "Add Assignment";
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // grpInputFormArea
@@ -217,13 +223,18 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(354, 372);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 35);
+            this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // grpMainDisplayArea
@@ -255,7 +266,7 @@
             // 
             // grpSummaryReportingArea
             // 
-            this.grpSummaryReportingArea.Controls.Add(this.button1);
+            this.grpSummaryReportingArea.Controls.Add(this.btnViewProgress);
             this.grpSummaryReportingArea.Controls.Add(this.btnSummary);
             this.grpSummaryReportingArea.Controls.Add(this.lblModuleProgress);
             this.grpSummaryReportingArea.Controls.Add(this.lblDashboardSummary);
@@ -268,16 +279,16 @@
             this.grpSummaryReportingArea.TabStop = false;
             this.grpSummaryReportingArea.Text = "Summary & Reporting Area";
             // 
-            // button1
+            // btnViewProgress
             // 
-            this.button1.Location = new System.Drawing.Point(344, 127);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 35);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "View Progress";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnViewProgress.Location = new System.Drawing.Point(344, 127);
+            this.btnViewProgress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnViewProgress.Name = "btnViewProgress";
+            this.btnViewProgress.Size = new System.Drawing.Size(148, 48);
+            this.btnViewProgress.TabIndex = 17;
+            this.btnViewProgress.Text = "View Progress";
+            this.btnViewProgress.UseVisualStyleBackColor = true;
+            this.btnViewProgress.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSummary
             // 
@@ -328,11 +339,11 @@
             this.grpSearch.Controls.Add(this.lblKeyword);
             this.grpSearch.Controls.Add(this.txtKeyword);
             this.grpSearch.Controls.Add(this.btnFind);
-            this.grpSearch.Location = new System.Drawing.Point(258, 55);
+            this.grpSearch.Location = new System.Drawing.Point(278, 55);
             this.grpSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpSearch.Size = new System.Drawing.Size(274, 202);
+            this.grpSearch.Size = new System.Drawing.Size(314, 202);
             this.grpSearch.TabIndex = 17;
             this.grpSearch.TabStop = false;
             this.grpSearch.Text = "Search";
@@ -349,21 +360,23 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(87, 28);
+            this.txtKeyword.Location = new System.Drawing.Point(98, 28);
             this.txtKeyword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(179, 26);
+            this.txtKeyword.Size = new System.Drawing.Size(195, 26);
             this.txtKeyword.TabIndex = 15;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(87, 98);
+            this.btnFind.BackColor = System.Drawing.Color.White;
+            this.btnFind.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFind.Location = new System.Drawing.Point(98, 97);
             this.btnFind.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(112, 35);
             this.btnFind.TabIndex = 15;
             this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // grpradiob
@@ -480,7 +493,7 @@
         private System.Windows.Forms.GroupBox grpSearch;
         private System.Windows.Forms.GroupBox grpradiob;
         private System.Windows.Forms.Button btnSummary;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewProgress;
         private System.Windows.Forms.Label lblModule;
     }
 }

@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
+using System.Windows.Forms.VisualStyles;
+using System.Diagnostics.Eventing.Reader;
+using System.IO;
 
 namespace FIRSTBYTE_HACKATHON_2026
 {
@@ -19,28 +22,56 @@ namespace FIRSTBYTE_HACKATHON_2026
         public FrmModuleTracker()
         {
             InitializeComponent();
+
+            //When the form runs the changes in the CFormUIDesign will apply
+            ApplyButtonTheme();
+            //Applies the background theme of the form when the form runs
+            ApplyFormTheme();
+            //Applies the styling of the forms main sections/group boxes when the form runs
+            ApplySectionTheme();
+            //Applies styling to the textboxes, when the form runs
+            ApplyInputTheme();
+            //applies styling to the completion combobox, when the form runs
+            ApplyComboBoxTheme();
+            //applies styling to the DateTimePicker box, when the form runs
+            ApplyDatePickerTheme();
+            //applies styling to the list box, when the form runs
+            ApplyListTheme();
+            //applies styling to the label boxes, when the form runs
+            ApplyLabelTheme();
+            //applies styling to the radio buttons, when the form runs
+            ApplyRadioButtonTheme();
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //declare.
-            string status;
+            
             // Create a new instance of a tracker class.
             CstudentTracker studentTracker = new CstudentTracker();
             
                 //Assign form input values to the object properties.
-                studentTracker._Module = txtModule.Text.Trim();
-                studentTracker._AssignmentName = txtAssignmentName.Text.Trim();
+                studentTracker.Module = txtModule.Text.Trim();
+                studentTracker.AssignmentName = txtAssignmentName.Text.Trim();
                 studentTracker._DueDate = dtpDueDate.Value;
+           
+            //Declare a variable for the dates to show completion status output.
+             DateTime dueDate=  dtpDueDate.Value;
+             DateTime today = DateTime.Today;
+             string status;
 
-                if (cmbStatus.SelectedIndex != -1)
-                {
-                    status = cmbStatus.SelectedItem.ToString();
-                }
-                else
-                {
-                    status = "Pending";
-                }
+            if (dueDate < today)
+            {
+                status = "Overdue";
+            }
+            else if (dueDate == today)
+            {
+                status = "Due today";
+            }
+            else
+            {
+                status = "Pending";
+            }
 
                 studentTracker._CompletionStatus = status;
             
@@ -62,7 +93,7 @@ namespace FIRSTBYTE_HACKATHON_2026
             foreach (CstudentTracker item in assignmentList)
             {
                
-                string displayString = $"{item._Module} - {item._AssignmentName} ({item._DueDate.ToShortDateString()}) [{item._CompletionStatus}]";
+                string displayString = $"{item.Module} - {item.AssignmentName} ({item._DueDate.ToShortDateString()}) [{item._CompletionStatus}]";
                 lstAssignments.Items.Add(displayString);
             }
         }
@@ -106,9 +137,9 @@ namespace FIRSTBYTE_HACKATHON_2026
             foreach (CstudentTracker item in assignmentList)
             {
                 // Check if the search term matches either the module code or the assignment name
-                if (item._Module.ToLower().Contains(searchTerm) || item._AssignmentName.ToLower().Contains(searchTerm))
+                if (item.Module.ToLower().Contains(searchTerm) || item.AssignmentName.ToLower().Contains(searchTerm))
                 {
-                    string displayString = $"{item._Module} - {item._AssignmentName} ({item._DueDate.ToShortDateString()}) [{item._CompletionStatus}]";
+                    string displayString = $"{item.Module} - {item.AssignmentName} ({item._DueDate.ToShortDateString()}) [{item._CompletionStatus}]";
                     lstAssignments.Items.Add(displayString);
                 }
             }
@@ -138,7 +169,7 @@ namespace FIRSTBYTE_HACKATHON_2026
             int foundIndex = -1;
             for (int i = 0; i < assignmentList.Count; i++)
             {
-                if (assignmentList[i]._Module.ToLower().Contains(target) || assignmentList[i]._AssignmentName.ToLower().Contains(target))
+                if (assignmentList[i].Module.ToLower().Contains(target) || assignmentList[i].AssignmentName.ToLower().Contains(target))
                 {
                     foundIndex = i;
                     break; // Stop at the first match
@@ -161,7 +192,7 @@ namespace FIRSTBYTE_HACKATHON_2026
             // Check if the radio button is selected, then sort and refresh
             if (radModule.Checked)
             {
-                assignmentList = assignmentList.OrderBy(x => x._Module).ToList();
+                assignmentList = assignmentList.OrderBy(x => x.Module).ToList();
                 RefreshDataGrid();
             }
         }
@@ -203,34 +234,47 @@ namespace FIRSTBYTE_HACKATHON_2026
             // Display total and overdue matching the dashboard layout
             lblDashboardSummary.Text = $"Total: {totalAssignments} | Overdue: {overdueCount}";
 
-            // Calculate specific module progress percentage (e.g., for a selected module or overall completion)
-            if (totalAssignments > 0)
-            {
-                int completedCount = assignmentList.Count(x => x._CompletionStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase));
-                int percentage = (completedCount * 100) / totalAssignments;
-                lblModuleProgress.Text = $"Module Progress: {percentage}%";
-            }
-            else
-            {
-                lblModuleProgress.Text = "Module Progress: 0%";
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            MessageBox.Show("Assignments saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        
-        }
-
-        private void FrmModuleTracker_Load(object sender, EventArgs e)
-        {
            
         }
 
-        private void grpInputFormArea_Enter(object sender, EventArgs e)
+        private void btnFiles_Click(object sender, EventArgs e)
         {
+            //Declare a list.
+            List<string> assignments = new List<string>();
 
+            //Save data fro the listbox to the list.
+            if(dlgSaveFile.ShowDialog() == DialogResult.OK)
+            {
+                foreach(var file in lstAssignments.Items)
+                {
+                    assignments.Add(file.ToString());
+                }
+
+                //Serialize the list.
+                JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented=true};
+                string jsonString = JsonSerializer.Serialize(assignments, options);
+
+                //Write json string to a file.
+                File.WriteAllText(dlgSaveFile.FileName, jsonString);
+            }
+        }
+
+        private void btnRecover_Click(object sender, EventArgs e)
+        {
+            //Declare a list.
+            List<string> assignment = new List<string>();
+
+            if(dlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                lstAssignments.Items.Clear();
+
+                string jsonString=File.ReadAllText(dlgOpenFile.FileName);
+
+                assignment = JsonSerializer.Deserialize<List<string>>(jsonString);
+
+
+                lstAssignments.Items.AddRange(assignment.ToArray());
+            }
         }
     }
     
